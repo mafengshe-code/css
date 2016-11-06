@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes move {
+            0%,
+            100% {
+                transform: translate(0px);
+            }
+            25% {
+                transform: translate(-64px);
+            }
+            75% {
+                transform: translate(32px);
+            }
+
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        body, ul, ol, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .loading3 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 64px;
+            width: 64px;
+            animation: rotate 5s linear infinite;
+            transform-origin: 16px 16px;
+        }
+
+        .loading3 .cycle-line {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 64px;
+            height: 24px;
+            transform-origin: 4px 4px;
+        }
+
+        .loading3 .cycle-line:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .loading3 .cycle-line:nth-child(2) {
+            transform: rotate(90deg);
+        }
+
+        .loading3 .cycle-line:nth-child(3) {
+            transform: rotate(180deg);
+        }
+
+        .loading3 .cycle-line:nth-child(4) {
+            transform: rotate(270deg);
+        }
+
+        .loading3 .cycle-line .cycle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            border-radius: 50%;
+            animation: move 2.5s infinite linear;
+        }
+
+        .loading3 .cycle-line .cycle:nth-child(1) {
+            margin-left: -4px;
+            margin-top: -4px;
+            background: blue;
+            width: 8px;
+            height: 8px;
+            animation-delay: 600ms;
+        }
+
+        .loading3 .cycle-line .cycle:nth-child(2) {
+
+            margin-left: -8px;
+            margin-top: -8px;
+            background: red;
+            width: 16px;
+            height: 16px;
+            animation-delay: 300ms;
+        }
+
+        .loading3 .cycle-line .cycle:nth-child(3) {
+            margin-left: -12px;
+            margin-top: -12px;
+            background: gold;
+            width: 24px;
+            height: 24px;
+
+            animation-delay: 0ms;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="loading3">
+    <div class="cycle-line">
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+    </div>
+    <div class="cycle-line">
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+    </div>
+    <div class="cycle-line">
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+    </div>
+    <div class="cycle-line">
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+        <div class="cycle"></div>
+    </div>
+</div>
+</body>
+</html>
