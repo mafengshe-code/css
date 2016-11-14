@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body li ul ol{
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid{
+            display: flex;
+            border: 1px solid red;
+
+        }
+
+        .grid-cell{
+            border: 1px solid blue;
+            height: 100px;
+            flex-grow: 1;
+        }
+
+        .grid-cell:nth-child(1){
+            flex-grow: 2;
+            order: 2;
+        }
+        .grid-cell:nth-child(2){
+            order: 1;
+        }
+        .grid-cell:nth-child(3){
+            order: 3;
+        }
+
+        header, footer{
+            height: 20px;
+            border: 1px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>header</header>
+<div class="grid">
+    <div class="grid-cell">2</div>
+    <div class="grid-cell">1</div>
+    <div class="grid-cell">3</div>
+</div>
+<footer>footer</footer>
+</body>
+</html>
